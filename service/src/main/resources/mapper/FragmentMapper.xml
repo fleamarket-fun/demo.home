@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.fleamarket.mapper.FragmentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="fun.fleamarket.entity.Fragment">
+        <id column="fragment_id" property="fragmentId" />
+        <result column="fragment_key" property="fragmentKey" />
+        <result column="fragment_content" property="fragmentContent" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        fragment_id, fragment_key, fragment_content, created_time, updated_time
+    </sql>
+
+</mapper>

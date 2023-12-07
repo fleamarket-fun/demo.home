@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.fleamarket.mapper.WidgetMetaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="fun.fleamarket.entity.WidgetMeta">
+        <id column="widget_meta_id" property="widgetMetaId" />
+        <result column="widget_id" property="widgetId" />
+        <result column="meta_key" property="metaKey" />
+        <result column="meta_value" property="metaValue" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        widget_meta_id, widget_id, meta_key, meta_value, created_time, updated_time
+    </sql>
+
+</mapper>

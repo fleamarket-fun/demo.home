@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.fleamarket.mapper.WidgetMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="fun.fleamarket.entity.Widget">
+        <id column="widget_id" property="widgetId" />
+        <result column="widget_key" property="widgetKey" />
+        <result column="title" property="title" />
+        <result column="widget_type" property="widgetType" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        widget_id, widget_key, title, widget_type
+    </sql>
+
+</mapper>
