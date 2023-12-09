@@ -13,8 +13,6 @@ export default defineNuxtConfig({
             ],
             link: [
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-                {rel: 'stylesheet', type: 'text/css', media: 'all', href: 'static/960grid/css/min/reset.css'},
-                {rel: 'stylesheet', type: 'text/css', media: 'all', href: 'static/960grid/css/min/text.css'},
                 {rel: 'stylesheet', type: 'text/css', media: 'all', href: 'static/960grid/css/min/960.css'},
             ],
             script: []

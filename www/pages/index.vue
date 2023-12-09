@@ -126,4 +126,7 @@
 
 <script setup lang="ts">
 import {NCard, NCarousel, NLayout, NLayoutSider, NSpace, NTabs} from "naive-ui";
+definePageMeta({
+  layout: 'frontend'
+})
 </script>
