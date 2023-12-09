@@ -1,7 +1,5 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  是否是
 </template>
 <script setup lang="ts">
 </script>
