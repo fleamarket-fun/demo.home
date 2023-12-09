@@ -1,6 +1,6 @@
 <template>
   <div class="mb-16">
-    <el-row class="mb-16">
+    <el-row >
       <el-col :span="24">
         <n-carousel show-arrow>
           <img class="carousel-img" src="/static/images/banner/1.jpg">
@@ -79,17 +79,37 @@
           <el-text class="mx-1" size="large"><strong>新闻资讯</strong></el-text>
         </div>
         <el-row :gutter="20">
-          <el-col :span="6">
-            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          <el-col :span="12">
+            <n-space vertical>
+              <n-card title="小卡片" size="small" >
+                <template #header-extra>
+                  2023-12-09
+                </template>
+                手动阀手动阀胜多负少士大夫
+              </n-card>
+              <n-card title="小卡片" size="small" >
+                <template #header-extra>
+                  2023-12-09
+                </template>
+                手动阀手动阀胜多负少士大夫
+              </n-card>
+            </n-space>
           </el-col>
-          <el-col :span="6">
-            <el-image src="/static/images/product/2.jpg" fit="fill"></el-image>
-          </el-col>
-          <el-col :span="6">
-            <el-image src="/static/images/product/3.jpg" fit="fill"></el-image>
-          </el-col>
-          <el-col :span="6">
-            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          <el-col :span="12">
+            <n-space vertical>
+              <n-card title="小卡片" size="small" >
+                <template #header-extra>
+                  2023-12-09
+                </template>
+               手动阀手动阀胜多负少士大夫
+              </n-card>
+              <n-card title="小卡片" size="small" >
+                <template #header-extra>
+                  2023-12-09
+                </template>
+                手动阀手动阀胜多负少士大夫
+              </n-card>
+            </n-space>
           </el-col>
         </el-row>
       </el-col>
@@ -105,5 +125,5 @@
 </style>
 
 <script setup lang="ts">
-import {NCarousel, NLayout, NLayoutSider, NTabs} from "naive-ui";
+import {NCard, NCarousel, NLayout, NLayoutSider, NSpace, NTabs} from "naive-ui";
 </script>
