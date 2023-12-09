@@ -3,8 +3,16 @@ body,
 #app {
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 }
-
+body{
+  background-image: url("/static/images/patterns/az_subtle.png");
+}
+.box{
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
 html.dark {
   background: #222;
   color: white;
@@ -13,6 +21,10 @@ html.dark {
 a {
   font-weight: 400;
   color: var(--el-color-primary);
+}
+.page-box{
+  background: #ffffff;
+  padding: 16px;
 }
 .mb-8{
   margin-bottom:8px;

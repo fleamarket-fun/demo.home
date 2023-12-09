@@ -1,33 +1,109 @@
 <template>
-  <div class="container_12">
-    <n-carousel show-arrow>
-      <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-      >
-      <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-      >
-      <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-      >
-      <img
-          class="carousel-img"
-          src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-      >
-    </n-carousel>
+  <div class="mb-16">
+    <el-row class="mb-16">
+      <el-col :span="24">
+        <n-carousel show-arrow>
+          <img class="carousel-img" src="/static/images/banner/1.jpg">
+          <img class="carousel-img" src="/static/images/banner/2.jpg">
+        </n-carousel>
+      </el-col>
+    </el-row>
+  </div>
+  <div class="mb-16">
+    <el-row>
+      <el-col :span="24">
+        <div class="line mb-16" style="border-bottom: 1px solid var(--el-border-color);width: 100%;">
+          <el-text class="mx-1" size="large"><strong>产品信息</strong></el-text>
+        </div>
+        <el-row :gutter="20">
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/2.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/3.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </div>
+  <div class="mb-16">
+    <el-row>
+      <el-col :span="24">
+        <div class="line mb-16" style="border-bottom: 1px solid var(--el-border-color);width: 100%;">
+          <el-text class="mx-1" size="large"><strong>关于我们</strong></el-text>
+        </div>
+        <el-row :span="24" :gutter="20">
+          <el-col :span="16">
+            测试测试
+          </el-col>
+          <el-col :span="8">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </div>
+  <div class="mb-16">
+    <el-row>
+      <el-col :span="24">
+        <div class="line mb-16" style="border-bottom: 1px solid var(--el-border-color);width: 100%;">
+          <el-text class="mx-1" size="large"><strong>成功案例</strong></el-text>
+        </div>
+        <el-row :gutter="20">
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/2.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/3.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
+  </div>
+  <div class="mb-16">
+    <el-row>
+      <el-col :span="24">
+        <div class="line mb-16" style="border-bottom: 1px solid var(--el-border-color);width: 100%;">
+          <el-text class="mx-1" size="large"><strong>新闻资讯</strong></el-text>
+        </div>
+        <el-row :gutter="20">
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/2.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/3.jpg" fit="fill"></el-image>
+          </el-col>
+          <el-col :span="6">
+            <el-image src="/static/images/product/1.jpg" fit="fill"></el-image>
+          </el-col>
+        </el-row>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <style scoped>
 .carousel-img {
   width: 100%;
-  height: 240px;
   object-fit: cover;
 }
+
 </style>
 
 <script setup lang="ts">
-import {NCarousel} from "naive-ui";
+import {NCarousel, NLayout, NLayoutSider, NTabs} from "naive-ui";
 </script>

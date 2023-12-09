@@ -1,7 +1,6 @@
 <template>
-  <div class="container_12 mb-16">
+  <div class="mb-16">
     <el-menu
-        class="el-menu-demo"
         mode="horizontal"
         :ellipsis="false"
     >
