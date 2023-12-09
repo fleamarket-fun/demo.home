@@ -1,5 +1,5 @@
 <template>
-  <div class="container_12">
+  <div class="container_12 mb-16">
     <el-menu
         class="el-menu-demo"
         mode="horizontal"
@@ -8,7 +8,7 @@
       <el-menu-item index="0">
         <img
             style="width: 100px"
-            src=""
+            src="/static/images/logo.png"
             alt="Element logo"
         />
       </el-menu-item>

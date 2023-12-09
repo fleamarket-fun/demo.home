@@ -3,8 +3,8 @@
     <div class="block text-center" style="height: 300px">
       <el-carousel height="auto" autoplay>
         <el-carousel-item style="height: 300px">
-          <el-image  src="static/images/banner_1.jpg" fit="fill" />
           <h3 class="small justify-center" text="2xl">height 100px</h3>
+          <el-image  src="static/images/banner_1.jpg" fit="fill" />
         </el-carousel-item>
         <el-carousel-item style="height: 300px">
           <el-image  src="static/images/banner_2.jpg" fit="fill" />
