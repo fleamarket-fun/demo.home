@@ -2,14 +2,28 @@
   <div class="common-layout">
     <el-container>
       <el-aside width="250px">
+        <el-row>
+          <el-col style="padding: 24px;">
+            <table>
+              <tr>
+                <td rowspan="2">
+                  <el-avatar :size="50" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"/>
+                </td>
+                <td>管理员</td>
+              </tr>
+              <tr>
+                <td>
+                  <el-text size="small">退出登录</el-text>
+                </td>
+              </tr>
+            </table>
+          </el-col>
+        </el-row>
         <el-menu
             default-active="2"
             @open="handleOpen"
             @close="handleClose"
         >
-          <el-menu-item>
-            sdfsdf
-          </el-menu-item>
           <el-sub-menu index="1">
             <template #title>
               <el-icon>
@@ -50,8 +64,8 @@
         </el-menu>
       </el-aside>
       <el-main>
-        <el-tabs>
-          <el-tab-pane label="User" name="first">User</el-tab-pane>
+        <el-tabs closable type="card">
+          <el-tab-pane label="首页" name="first" :closable="false">首页</el-tab-pane>
           <el-tab-pane label="Config" name="second">Config</el-tab-pane>
           <el-tab-pane label="Role" name="third">Role</el-tab-pane>
           <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>

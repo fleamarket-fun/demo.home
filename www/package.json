@@ -11,17 +11,19 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "nuxt": "^3.8.2",
+    "nuxt-primevue": "^0.2.2",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@css-render/vue3-ssr": "^0.15.10",
     "@element-plus/icons-vue": "^2.1.0",
     "@element-plus/nuxt": "^1.0.6",
+    "@unocss/nuxt": "^0.53.6",
     "element-plus": "^2.3.14",
-    "sass": "^1.69.5",
-    "@css-render/vue3-ssr": "^0.15.10",
-    "naive-ui": "^2.35.0",
-    "@unocss/nuxt": "^0.53.6"
+    "primeicons": "^6.0.1",
+    "sass": "^1.69.5"
   }
 }

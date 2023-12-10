@@ -1,12 +1,12 @@
 <template>
-  <div class="box">
-    <div class="container_12 page-box">
-      <Header></Header>
-      <slot/>
-      <Footer></Footer>
-      <el-backtop :right="100" :bottom="100" />
-    </div>
+
+  <div class="container mx-auto">
+    <Header></Header>
+    <slot/>
+    <Footer></Footer>
+    <el-backtop :right="100" :bottom="100" />
   </div>
+
 </template>
 <style>
 body{

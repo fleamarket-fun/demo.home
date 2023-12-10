@@ -1,4 +1,5 @@
 <template>
+
   <div class="mb-16">
     <el-row >
       <el-col :span="24">
@@ -124,8 +125,10 @@
 
 </style>
 
+
 <script setup lang="ts">
-import {NCard, NCarousel, NLayout, NLayoutSider, NSpace, NTabs} from "naive-ui";
+
+
 definePageMeta({
   layout: 'frontend'
 })
