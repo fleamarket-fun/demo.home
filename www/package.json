@@ -24,6 +24,7 @@
     "@unocss/nuxt": "^0.53.6",
     "element-plus": "^2.3.14",
     "primeicons": "^6.0.1",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "vue3-carousel-nuxt": "^1.1.0"
   }
 }

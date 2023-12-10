@@ -1,15 +1,4 @@
 <template>
-
-  <div class="mb-16">
-    <el-row >
-      <el-col :span="24">
-        <n-carousel show-arrow>
-          <img class="carousel-img" src="/static/images/banner/1.jpg">
-          <img class="carousel-img" src="/static/images/banner/2.jpg">
-        </n-carousel>
-      </el-col>
-    </el-row>
-  </div>
   <div class="mb-16">
     <el-row>
       <el-col :span="24">

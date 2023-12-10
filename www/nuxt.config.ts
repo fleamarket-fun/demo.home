@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     modules: [
         '@element-plus/nuxt',
         'nuxt-primevue',
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+        'vue3-carousel-nuxt'
     ],
     primevue: {
         usePrimeVue: true
