@@ -13,13 +13,12 @@ export default defineNuxtConfig({
             ],
             link: [
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-                {rel: 'stylesheet', type: 'text/css', media: 'all', href: 'static/960grid/css/min/960.css'},
+                {rel: 'stylesheet', type: 'text/css', href: '/static/custom.css'},
             ],
             script: []
         }
     },
     css: [
-        '~/assets/scss/index.scss',
         "primevue/resources/themes/lara-light-amber/theme.css",
         "primeicons/primeicons.css"
     ],
@@ -31,18 +30,5 @@ export default defineNuxtConfig({
     ],
     primevue: {
         usePrimeVue: true
-    },
-    vite: {
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    additionalData: `@use "@/assets/scss/element/index.scss" as element;`,
-                },
-            },
-        },
-    },
-    elementPlus: {
-        icon: 'ElIcon',
-        importStyle: 'scss'
     }
 })

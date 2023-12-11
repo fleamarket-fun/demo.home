@@ -1,10 +1,19 @@
 <template>
 
-  <div class="container mx-auto">
-    <Header></Header>
+  <div class="container mx-auto px-4 page-box">
+    <HeadMenu></HeadMenu>
     <slot/>
     <Footer></Footer>
-    <el-backtop :right="100" :bottom="100" />
+    <ScrollTop
+        threshold="100"
+        icon="pi pi-arrow-up"
+        :pt="{
+            root: 'w-2rem h-2rem border-round-sm bg-orange-400',
+            icon: {
+                class: 'text-base'
+            }
+        }"
+    />
   </div>
 
 </template>
@@ -14,4 +23,7 @@ body{
 }
 </style>
 <script setup lang="ts">
+import ScrollTop from 'primevue/scrolltop';
+import {Footer} from "#components";
+import HeadMenu from "~/components/HeadMenu.vue";
 </script>
