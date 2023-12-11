@@ -1,12 +1,15 @@
 package fun.fleamarket.entity;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * <p>
- * 
+ * 用户信息
  * </p>
  *
  * @author zhujun
@@ -18,6 +21,7 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("用户ID")
+    @TableId(value = "user_id", type = IdType.AUTO)
     private Long userId;
 
     @ApiModelProperty("用户名称")
@@ -87,12 +91,12 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-        "userId=" + userId +
-        ", userName=" + userName +
-        ", userPass=" + userPass +
-        ", createdTime=" + createdTime +
-        ", updatedTime=" + updatedTime +
-        ", isAdmin=" + isAdmin +
-        "}";
+                "userId=" + userId +
+                ", userName=" + userName +
+                ", userPass=" + userPass +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
+                ", isAdmin=" + isAdmin +
+                "}";
     }
 }

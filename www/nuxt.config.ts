@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: {enabled: false},
+    devtools: {enabled: true},
+    runtimeConfig: {
+        // Keys within public are also exposed client-side
+        public: {
+            apiBase: process.env.BASE_URL
+        }
+    },
     app: {
         head: {
             title: '跳蚤市场：软件应用服务商',

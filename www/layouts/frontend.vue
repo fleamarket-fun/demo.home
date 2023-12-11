@@ -5,7 +5,6 @@
     <slot/>
     <Footer></Footer>
     <ScrollTop
-        threshold="100"
         icon="pi pi-arrow-up"
         :pt="{
             root: 'w-2rem h-2rem border-round-sm bg-orange-400',

@@ -1,5 +1,6 @@
 package fun.fleamarket.controller;
 
+import fun.fleamarket.common.controller.BaseController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @RequestMapping("/product")
-public class ProductController {
+public class ProductController extends BaseController {
+
+
 
 }
