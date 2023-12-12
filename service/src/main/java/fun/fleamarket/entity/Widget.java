@@ -1,6 +1,9 @@
 package fun.fleamarket.entity;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -18,6 +21,7 @@ public class Widget implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("主键id")
+    @TableId(value = "widget_id", type = IdType.AUTO)
     private Long widgetId;
 
     @ApiModelProperty("组件标识")

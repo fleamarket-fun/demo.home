@@ -24,7 +24,6 @@ import java.util.List;
  * @since 2023-12-07
  */
 @Api(value="WidgetController",tags={"组件数据获取接口"})
-@Controller
 @RestController("/widget")
 public class WidgetController  extends BaseController {
 
