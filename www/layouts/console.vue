@@ -30,7 +30,8 @@
               <span>内容管理</span>
             </template>
             <el-menu-item index="1-1">
-              <span>新闻资讯</span>
+              <span>新闻资讯 </span>
+              <NuxtLink to="/console/caselist">嵌套</NuxtLink>
             </el-menu-item>
             <el-menu-item>
               <span>产品信息</span>
@@ -51,27 +52,10 @@
               <span>组件设置</span>
             </el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="2">
-            <template #title>
-              <el-icon><Setting /></el-icon>
-              <span>其他设置</span>
-            </template>
-            <el-menu-item index="2-1">
-              <span>系统设置</span>
-            </el-menu-item>
-            <el-menu-item index="2-1">
-              <span>修改密码</span>
-            </el-menu-item>
-          </el-sub-menu>
         </el-menu>
       </el-aside>
       <el-main>
-        <el-tabs closable type="card">
-          <el-tab-pane label="首页" name="first" :closable="false">首页</el-tab-pane>
-          <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-          <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-          <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
-        </el-tabs>
+        <NuxtPage></NuxtPage>
       </el-main>
     </el-container>
   </div>
@@ -115,6 +99,10 @@ import {
   Location,
   Setting, Edit,
 } from '@element-plus/icons-vue'
+import Index from "~/pages/console/index.vue";
+import Login from "~/layouts/login.vue";
+import Caselist from "~/pages/console/caselist.vue";
+import { createRouter, createWebHistory } from 'vue-router'
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)

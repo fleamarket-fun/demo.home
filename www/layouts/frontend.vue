@@ -2,7 +2,7 @@
 
   <div class="container mx-auto px-4 page-box">
     <HeadMenu></HeadMenu>
-    <slot/>
+    <slot></slot>
     <Footer></Footer>
     <ScrollTop
         icon="pi pi-arrow-up"
