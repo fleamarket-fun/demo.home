@@ -6,8 +6,9 @@
           <el-col style="padding: 24px;">
             <table>
               <tr>
-                <td rowspan="2" >
-                  <el-avatar class="mr-6" :size="50" src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"/>
+                <td rowspan="2">
+                  <el-avatar class="mr-6" :size="50"
+                             src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"/>
                 </td>
                 <td>管理员</td>
               </tr>
@@ -26,31 +27,47 @@
         >
           <el-sub-menu index="1">
             <template #title>
-              <el-icon><Edit /></el-icon>
+              <el-icon>
+                <Edit/>
+              </el-icon>
               <span>内容管理</span>
             </template>
             <el-menu-item index="1-1">
-              <span>新闻资讯 </span>
-              <NuxtLink to="/console/caselist">嵌套</NuxtLink>
+              <NuxtLink to="/console/newslist"><span>新闻资讯 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>产品信息</span>
+              <NuxtLink to="/console/productlist"><span>产品信息 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>资料下载</span>
+              <NuxtLink to="/console/downloadlist"><span>资料下载 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>客户案例</span>
+              <NuxtLink to="/console/caselist"><span>客户案例 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>招聘信息</span>
+              <NuxtLink to="/console/joblist"><span>招聘信息 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>片段管理</span>
+              <NuxtLink to="/console/fragmentlist"><span>片段管理 </span></NuxtLink>
             </el-menu-item>
             <el-menu-item>
-              <span>组件设置</span>
+              <NuxtLink to="/console/widgetlist"><span>组件设置 </span></NuxtLink>
             </el-menu-item>
+          </el-sub-menu>
+          <el-sub-menu index="2">
+            <template #title>
+              <el-icon>
+                <Setting/>
+              </el-icon>
+              <span>其他设置</span>
+            </template>
+            <el-menu-item index="2-1">
+              <NuxtLink to="/console/system"><span>系统设置 </span></NuxtLink>
+            </el-menu-item>
+            <el-menu-item index="2-2">
+              <NuxtLink to="/console/password"><span>修改密码 </span></NuxtLink>
+            </el-menu-item>
+
           </el-sub-menu>
         </el-menu>
       </el-aside>
@@ -102,7 +119,7 @@ import {
 import Index from "~/pages/console/index.vue";
 import Login from "~/layouts/login.vue";
 import Caselist from "~/pages/console/caselist.vue";
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
