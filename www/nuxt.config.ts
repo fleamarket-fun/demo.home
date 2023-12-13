@@ -15,7 +15,7 @@ export default defineNuxtConfig({
                 {
                     name: '跳蚤市场：软件应用服务商',
                     content: '跳蚤市场致力于为客户提供一站式应用软件服务，产品有：企业公司网站，社交系统，企业客户关系管理系统，电子商城等。',
-                },
+                }
             ],
             link: [
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
