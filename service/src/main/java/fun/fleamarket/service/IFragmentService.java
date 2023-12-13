@@ -2,6 +2,9 @@ package fun.fleamarket.service;
 
 import fun.fleamarket.entity.Fragment;
 import com.baomidou.mybatisplus.extension.service.IService;
+import fun.fleamarket.vo.FragmentVO;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IFragmentService extends IService<Fragment> {
 
+    List<FragmentVO> listall();
 }

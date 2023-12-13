@@ -13,12 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * <p>
- *  服务实现类
+ *  案例服务
  * </p>
  *
  * @author zhujun
@@ -34,13 +33,13 @@ public class CaseServiceImpl extends ServiceImpl<CaseMapper, Case> implements IC
     public List<CaseVO> listall() {
         QueryWrapper<Case> queryWrapper = new QueryWrapper<>();
         List<Case> cases = caseMapper.selectList(queryWrapper);
-        List<CaseVO> caseVOS = new ArrayList<>();
+        List<CaseVO> vos = new ArrayList<>();
         cases.forEach(item ->{
             CaseVO vo = new CaseVO();
             BeanUtils.copyProperties(item, vo);
-            caseVOS.add(vo);
+            vos.add(vo);
         });
-        return caseVOS;
+        return vos;
     }
 
     @Override
@@ -48,13 +47,13 @@ public class CaseServiceImpl extends ServiceImpl<CaseMapper, Case> implements IC
         Page<Case> page = new Page<>(pageDTO.getCurrent(),pageDTO.getPagesize());
         QueryWrapper queryWrapper = new QueryWrapper();
         List<Case> cases = caseMapper.selectList(page,queryWrapper);
-        List<CaseVO> caseVOS = new ArrayList<>();
+        List<CaseVO> vos = new ArrayList<>();
         cases.forEach(item ->{
             CaseVO vo = new CaseVO();
             BeanUtils.copyProperties(item, vo);
-            caseVOS.add(vo);
+            vos.add(vo);
         });
-        return caseVOS;
+        return vos;
     }
 
 }

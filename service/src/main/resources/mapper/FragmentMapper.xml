@@ -6,6 +6,7 @@
     <resultMap id="BaseResultMap" type="fun.fleamarket.entity.Fragment">
         <id column="fragment_id" property="fragmentId" />
         <result column="fragment_key" property="fragmentKey" />
+        <result column="title" property="title" />
         <result column="fragment_content" property="fragmentContent" />
         <result column="created_time" property="createdTime" />
         <result column="updated_time" property="updatedTime" />

@@ -1,7 +1,11 @@
 package fun.fleamarket.service;
 
+import fun.fleamarket.dto.PageDTO;
 import fun.fleamarket.entity.Download;
 import com.baomidou.mybatisplus.extension.service.IService;
+import fun.fleamarket.vo.DownloadVO;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDownloadService extends IService<Download> {
 
+    List<DownloadVO> listall();
+
+    List<DownloadVO> listpage(PageDTO pageDTO);
 }

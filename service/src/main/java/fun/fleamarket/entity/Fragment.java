@@ -2,13 +2,15 @@ package fun.fleamarket.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author zhujun
@@ -25,6 +27,9 @@ public class Fragment implements Serializable {
 
     @ApiModelProperty("片段的KEY")
     private String fragmentKey;
+
+    @ApiModelProperty("标题")
+    private String title;
 
     @ApiModelProperty("片段的内容")
     private String fragmentContent;
@@ -76,14 +81,23 @@ public class Fragment implements Serializable {
         this.updatedTime = updatedTime;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     @Override
     public String toString() {
         return "Fragment{" +
-        "fragmentId=" + fragmentId +
-        ", fragmentKey=" + fragmentKey +
-        ", fragmentContent=" + fragmentContent +
-        ", createdTime=" + createdTime +
-        ", updatedTime=" + updatedTime +
-        "}";
+                "fragmentId=" + fragmentId +
+                ", fragmentKey=" + fragmentKey +
+                ", title=" + title +
+                ", fragmentContent=" + fragmentContent +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
+                "}";
     }
 }
