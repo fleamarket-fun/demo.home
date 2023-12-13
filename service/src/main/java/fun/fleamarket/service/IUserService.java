@@ -1,6 +1,6 @@
 package fun.fleamarket.service;
 
-import fun.fleamarket.dto.UserLogin;
+import fun.fleamarket.dto.UserLoginDTO;
 import fun.fleamarket.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import fun.fleamarket.vo.UserLoginResultVO;
@@ -15,5 +15,5 @@ import fun.fleamarket.vo.UserLoginResultVO;
  */
 public interface IUserService extends IService<User> {
 
-    UserLoginResultVO login(UserLogin userLogin);
+    UserLoginResultVO login(UserLoginDTO userLogin);
 }

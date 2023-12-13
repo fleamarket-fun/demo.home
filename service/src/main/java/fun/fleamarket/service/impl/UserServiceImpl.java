@@ -2,10 +2,9 @@ package fun.fleamarket.service.impl;
 
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.crypto.SecureUtil;
-import cn.hutool.crypto.digest.MD5;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import fun.fleamarket.common.redis.service.RedisService;
-import fun.fleamarket.dto.UserLogin;
+import fun.fleamarket.dto.UserLoginDTO;
 import fun.fleamarket.entity.User;
 import fun.fleamarket.mapper.UserMapper;
 import fun.fleamarket.service.IUserService;
@@ -14,7 +13,6 @@ import fun.fleamarket.vo.UserLoginResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Wrapper;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -35,7 +33,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     RedisService redisService;
 
     @Override
-    public UserLoginResultVO login(UserLogin userLogin) {
+    public UserLoginResultVO login(UserLoginDTO userLogin) {
         UserLoginResultVO loginResultVO = new UserLoginResultVO();
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_name",userLogin.getUsername());

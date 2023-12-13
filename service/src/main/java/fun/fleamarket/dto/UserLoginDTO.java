@@ -3,7 +3,7 @@ package fun.fleamarket.dto;
 import lombok.Data;
 
 @Data
-public class UserLogin {
+public class UserLoginDTO {
 
     private String username;
 

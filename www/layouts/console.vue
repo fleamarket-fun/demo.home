@@ -21,9 +21,9 @@
           </el-col>
         </el-row>
         <el-menu
-            default-active="1-1"
             @open="handleOpen"
             @close="handleClose"
+            default-openeds="[1]"
         >
           <el-sub-menu index="1">
             <template #title>
@@ -35,22 +35,22 @@
             <el-menu-item index="1-1">
               <NuxtLink to="/console/newslist"><span>新闻资讯 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-2">
               <NuxtLink to="/console/productlist"><span>产品信息 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-3">
               <NuxtLink to="/console/downloadlist"><span>资料下载 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-4">
               <NuxtLink to="/console/caselist"><span>客户案例 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-5">
               <NuxtLink to="/console/joblist"><span>招聘信息 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-6">
               <NuxtLink to="/console/fragmentlist"><span>片段管理 </span></NuxtLink>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="1-7">
               <NuxtLink to="/console/widgetlist"><span>组件设置 </span></NuxtLink>
             </el-menu-item>
           </el-sub-menu>

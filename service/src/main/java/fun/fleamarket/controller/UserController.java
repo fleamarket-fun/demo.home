@@ -2,7 +2,7 @@ package fun.fleamarket.controller;
 
 import fun.fleamarket.common.controller.BaseController;
 import fun.fleamarket.common.domain.AjaxResult;
-import fun.fleamarket.dto.UserLogin;
+import fun.fleamarket.dto.UserLoginDTO;
 import fun.fleamarket.service.IUserService;
 import fun.fleamarket.vo.UserLoginResultVO;
 import io.swagger.annotations.Api;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -32,7 +31,7 @@ public class UserController extends BaseController {
 
     @ApiOperation(value = "用户的登录接口")
     @PostMapping(value = "/login")
-    public AjaxResult login(@RequestBody UserLogin userLogin){
+    public AjaxResult login(@RequestBody UserLoginDTO userLogin){
 
         UserLoginResultVO loginResultVO = userService.login(userLogin);
 

@@ -1,7 +1,11 @@
 package fun.fleamarket.service;
 
+import fun.fleamarket.dto.PageDTO;
 import fun.fleamarket.entity.Case;
 import com.baomidou.mybatisplus.extension.service.IService;
+import fun.fleamarket.vo.CaseVO;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ICaseService extends IService<Case> {
 
+    List<CaseVO> listall();
+
+    List<CaseVO> listpage(PageDTO pageDTO);
 }
