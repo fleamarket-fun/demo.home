@@ -5,10 +5,6 @@
   <SucessfulCases></SucessfulCases>
   <News></News>
 </template>
-<style scoped>
-
-
-</style>
 <script setup lang="ts">
 import {Carousel} from "#components";
 import ProductInfo from "~/components/home/ProductInfo.vue";
