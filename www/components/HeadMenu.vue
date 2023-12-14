@@ -5,9 +5,8 @@
     </template>
     <template #item="{ item, props, hasSubmenu, root }">
       <a v-ripple class="flex align-items-center" v-bind="props.action">
-        <span :class="item.icon" />
         <span class="ml-2">
-          <NuxtLink :to="item.route">{{ item.label }}</NuxtLink>
+          <NuxtLink :to="item.route"><span :class="item.icon" /><span v-if="item.icon">&nbsp;</span>{{ item.label }}</NuxtLink>
         </span>
         <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
         <span v-if="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
