@@ -13,6 +13,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "nuxt": "^3.8.2",
     "nuxt-primevue": "^0.2.2",
     "vue": "^3.3.10",
@@ -26,6 +27,7 @@
     "@unocss/nuxt": "^0.53.6",
     "axios": "^1.6.2",
     "element-plus": "^2.3.14",
+    "pinia": "^2.1.7",
     "primeicons": "^6.0.1",
     "sass": "^1.69.5",
     "vue3-carousel-nuxt": "^1.1.0"

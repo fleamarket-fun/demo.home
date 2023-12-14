@@ -32,7 +32,9 @@ export default defineNuxtConfig({
         '@element-plus/nuxt',
         'nuxt-primevue',
         '@nuxtjs/tailwindcss',
-        'vue3-carousel-nuxt'
+        'vue3-carousel-nuxt',
+        '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
     ],
     primevue: {
         usePrimeVue: true

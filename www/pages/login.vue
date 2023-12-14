@@ -14,13 +14,12 @@
               :model="ruleForm"
               :rules="rules"
               label-position="Right"
-
           >
             <el-form-item label="用户名" prop="username">
               <el-input v-model="ruleForm.username"/>
             </el-form-item>
-            <el-form-item label="密&emsp;码" prop="password">
-              <el-input v-model="ruleForm.password"/>
+            <el-form-item label="密&emsp;码" prop="userpass">
+              <el-input type="password" v-model="ruleForm.userpass"/>
             </el-form-item>
           </el-form>
           <template #footer>
@@ -32,31 +31,36 @@
     </el-row>
   </el-main>
 </template>
+<style>
+body {
+  background-image: none;
+}
+</style>
 <script setup lang="ts">
 import type { FormInstance, FormRules } from 'element-plus'
 import {reactive, ref} from 'vue'
+import {useLoginStore} from "~/stores/mystore";
 
+const runtimeConfig = useRuntimeConfig()
 const ruleFormRef = ref<FormInstance>()
 
 const ruleForm = reactive({
   username: '',
-  password: ''
+  userpass: ''
 })
 
 const rules = reactive<FormRules<ruleForm>>({
   username: [
     {
       required: true,
-      message: '用户名为4~16字符之间（中文、字母、数字或下划线）',
-      min: 6, max: 18,
+      message: '登录名是必须的',
       trigger: 'blur',
     }
   ],
-  password: [
+  userpass: [
     {
       required: true,
-      message: '密码为6~18位字母、数字和符号',
-      min: 6, max: 18,
+      message: '密码是必须的',
       trigger: 'blur',
     }
   ]
@@ -65,9 +69,18 @@ const rules = reactive<FormRules<ruleForm>>({
 const submitForm = (formEl: FormInstance | undefined) => {
   console.log('submit');
   if (!formEl) return
-  formEl.validate((valid) => {
+  formEl.validate(async (valid) => {
     if (valid) {
-      console.log('submit!')
+      let data:any = await useFetch(runtimeConfig.public.apiBase + '/user/login', {'method': 'post', body: ruleForm})
+      const loginResult = unref(data.data);
+      if(loginResult.code==200 && loginResult.data.token!=null){
+        useLoginStore().username = loginResult.data.username;
+        useLoginStore().token = loginResult.data.token;
+        await navigateTo('/console')
+      }else{
+        ElMessage.error('用户名或者密码不正确')
+      }
+
     } else {
       console.log('error submit!')
       return false

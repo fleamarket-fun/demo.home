@@ -41,6 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         if(user!=null && user.getUserPass().equals(SecureUtil.md5(userLogin.getUserpass()))){
             String token = IdUtil.randomUUID();
             loginResultVO.setToken(token);
+            loginResultVO.setUsername(user.getUserName());
             redisService.setCacheObject(token,user,30l, TimeUnit.MINUTES);
         }
         return loginResultVO;

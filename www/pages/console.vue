@@ -3,6 +3,7 @@
 </template>
 <script setup lang="ts">
 definePageMeta({
-  layout: 'console'
+  layout: 'console',
+  middleware: ["auth"]
 })
 </script>
